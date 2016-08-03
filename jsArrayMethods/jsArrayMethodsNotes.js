@@ -46,3 +46,32 @@ var upper = name
 
 console.log(upper);
 
+// Array.prototype.indexOf();
+
+var family = ['Shane', 'Sally', 'Isaac', 'Kittie'];
+console.log(family.indexOf('Kittie')); // 3 -> the index of the array
+// when search fails, always returns -1;
+
+var family2 = ['Shane', 'Kittie', 'Sally', 'Isaac'];
+console.log(family.indexOf('Kittie', 2)); // returns -1
+// the second parameter states which index the indexOf function should start searching from. Kittie is in index 1
+
+// Realistic example.
+var whitelist = ['.css', '.js'];
+var events = [
+  {
+    file: 'css/core.css'
+  }, 
+  {
+    file: 'js/app.js'
+  },
+  {
+    file: 'index.html'
+  }
+];
+var filtered = events.filter(event => { // filter will return an array that matches the requirements
+  var ext = require('path').extname(event.file); // grab ext of each object
+  return whitelist.indexOf(ext) > -1; // return if the ext exists in whitelist (> -1)
+})
+console.log(filtered); // [ {file: 'css/core.css'}, {file: 'js/app.js'}]
+
