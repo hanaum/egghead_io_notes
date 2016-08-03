@@ -130,4 +130,10 @@ var items = [1,2,3,4,5,6];
 var filtered = items.filter(x => x > 3);
 console.log(filtered); // returns new array with items that fulfilll the parameter requirements [4,5,6];
 
+// Array.prototype.some()
+var items = [1,2,3,4,5,6];
+var hasThree = items.some(x => (x === 3));
+console.log(hasThree); // Quick query on array. Returns true or false.
+
+
 
