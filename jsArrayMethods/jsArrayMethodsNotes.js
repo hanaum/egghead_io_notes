@@ -101,3 +101,33 @@ items.sort((a, b) => {
 });
 // shortened way. Exactly the same as above.
 items.sort((a, b) => a - b);
+
+// Realistic example
+var lessons = [
+  {
+    title: 'JavaScript Array methods in depth - concat',
+    views: 1000
+  },
+    {
+    title: 'JavaScript Array methods in depth - slice',
+    views: 1050
+  },
+    {
+    title: 'JavaScript Array methods in depth - join',
+    views: 1025
+  }
+];
+
+var list = lessons
+  .sort((a, b)) => b.views - a.views) // array sorted by views
+  .map(x => '    <li>${x.title} (${x.views})</li>') // array of strings
+  .join('\n'); //return a string with a new line between each
+console.log(list);
+
+// Array.prototype.filter
+
+var items = [1,2,3,4,5,6];
+var filtered = items.filter(x => x > 3);
+console.log(filtered); // returns new array with items that fulfilll the parameter requirements [4,5,6];
+
+
