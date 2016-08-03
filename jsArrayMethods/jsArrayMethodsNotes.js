@@ -30,3 +30,19 @@ people
   .forEach(function (person) {
     console.log(person.name);
   })
+
+//Array.prototype.join();
+
+var names = ['Shane', 'Osbourne', 'Kelly'];
+// returns a string separated by the argument provided to join().
+console.log(names.join('.'));
+
+// Can also chain with other array methods.
+var name = 'shane osbourne';
+var upper = name
+  .split(' ') // [shane, osbourne]
+  .map(x => x.charAt(0).toUpperCase() + x.slice(0)) // [Shane, Osbourne]
+  .join(' '); // Shane Osbourne
+
+console.log(upper);
+
