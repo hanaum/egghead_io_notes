@@ -75,3 +75,10 @@ var filtered = events.filter(event => { // filter will return an array that matc
 })
 console.log(filtered); // [ {file: 'css/core.css'}, {file: 'js/app.js'}]
 
+// Array.prototype.slice()
+
+var items = [1,2,3,4,5];
+// takes a start and an end (non-including end)
+var copy = items.slice(0, 1); // makes a shallow copy of items array. So objects are still referenced if in the items array
+// returns the sliced array. This case returns [1]
+
