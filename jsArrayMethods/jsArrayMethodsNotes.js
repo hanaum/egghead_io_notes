@@ -82,3 +82,22 @@ var items = [1,2,3,4,5];
 var copy = items.slice(0, 1); // makes a shallow copy of items array. So objects are still referenced if in the items array
 // returns the sliced array. This case returns [1]
 
+// Array.prototype.sort()
+
+var item = ['Shane', 'Sally', 'Isaac'];
+items.sort(); // sorts alphabetically. But not numerically. Need to define sort parameters
+
+// normal way of defining sort
+items.sort((a, b) => {
+  if (a -b === 0) {
+    return 0;
+  }
+  if (a - b < 0) {
+    return -1;
+  }
+  if (a -b > 0) {
+    return 1;
+  }
+});
+// shortened way. Exactly the same as above.
+items.sort((a, b) => a - b);
