@@ -135,5 +135,11 @@ var items = [1,2,3,4,5,6];
 var hasThree = items.some(x => (x === 3));
 console.log(hasThree); // Quick query on array. Returns true or false.
 
+// Array.prototype.push()
+
+const pets = ['Cat', 'Dog'];
+pets.push('Hamster'); // the original array is modified in place
+console.log(pets);
+
 
 
