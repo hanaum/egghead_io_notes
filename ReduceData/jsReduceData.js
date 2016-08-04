@@ -71,6 +71,13 @@ var mean = data.reduce(reducer, 0);
 console.log(mean);
 
 
+// Tutorial example 5
 
+//flatten
+
+var data = [[1,2,3], [4,5,6], [7,8,9]];
+var flattened = data.reduce(function(acc, value) {
+  return acc.concat(value);
+}, [])
 
 
