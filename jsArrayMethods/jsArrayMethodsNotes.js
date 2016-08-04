@@ -141,5 +141,10 @@ const pets = ['Cat', 'Dog'];
 pets.push('Hamster'); // the original array is modified in place
 console.log(pets);
 
-
+// Array.prototype.map()
+// returns a new array that is the same length as the original
+const items = [1,2,3,4,5];
+const mapped = items.map(function (item) {
+  return item * 2; // uses the provided function to fill up the new array
+});
 
