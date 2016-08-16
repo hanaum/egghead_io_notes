@@ -148,3 +148,24 @@ const mapped = items.map(function (item) {
   return item * 2; // uses the provided function to fill up the new array
 });
 
+// forEach
+// accepts closure and invokes that closure to every element in the array
+function getStockSymbols(stocks) {
+  var symbols = [];
+  
+  stocks.forEach(function(stock) {
+    symbols.push(stock.symbol);
+  });
+  
+  return symbols;
+}
+
+var symbols = getStockSymbols([
+  { symbol: "XFX", price: 240.22, volume: 23432 },
+  { symbol: "TNZ", price: 332.19, volume: 234 },
+  { symbol: "JXJ", price: 120.22, volume: 5323 },
+]);
+
+console.log(JSON.stringify(symbols));
+
+
